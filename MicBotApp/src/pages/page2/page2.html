@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Video</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <button ion-button outline icon-only round large (click)='startCamera()'>
+    On
+        <ion-icon name="eye"></ion-icon>
+   </button>
+   <button ion-button outline icon-only round large (click)='stopCamera()'>
+     OFF
+        <ion-icon name="eye-off"></ion-icon>
+   </button>
+</ion-content>

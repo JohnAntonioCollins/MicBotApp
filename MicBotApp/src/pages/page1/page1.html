@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle >
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>MicBot</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+  
+  
+  
+  
+  <!-- CHOOSE ONE IP BASED ON LAN IP -->
+ 
+  <!-- <img src="http://10.0.0.20:5000/video_feed" class="fullscreen-bg_video" /> -->
+  <!-- <img src="http://192.168.1.159:5000/video_feed" class="fullscreen-bg_video" /> -->
+
+<div  class="fullscreen-bg">
+<img src="http://10.0.0.20:5000/video_feed" class="fullscreen-bg_video" />
+</div>
+<div class="upButton-position">
+     <button ion-button icon-only round outline large (click)='motor_A_forwardBUTTON()'>
+      <ion-icon name="arrow-round-up"></ion-icon>
+    </button>
+    <button ion-button outline icon-only round large (click)='motor_B_reverseBUTTON()'>
+  <ion-icon name="arrow-round-forward"></ion-icon>
+</button>
+</div>
+<div class="downButton-position">
+    <button ion-button outline  icon-only round large (click)='motor_B_forwardBUTTON()'>
+  <ion-icon name="arrow-round-back"></ion-icon>
+</button>
+    <button ion-button outline  icon-only round large (click)='motor_A_reverseBUTTON()'>
+      <ion-icon name="arrow-round-down"></ion-icon>
+  </button>
+</div>
+
+<div class="lightButton-position">
+   <button ion-button outline icon-only round large (click)='toggleAppButton()'>
+        <ion-icon name="bulb"></ion-icon>
+   </button>
+</div> 
+
+   </ion-content>
+  
+
+

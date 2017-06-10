@@ -8,17 +8,19 @@
 </ion-header>
 
 <ion-content >
-  
-  
-  
-  
-  <!-- CHOOSE ONE IP BASED ON LAN IP -->
- 
+
+
+
+
+  <!-- CHOOSE ONE IP BASED ON LAN IP , don't forget to change ip in services>motor-service.ts -->
+
   <!-- <img src="http://10.0.0.20:5000/video_feed" class="fullscreen-bg_video" /> -->
   <!-- <img src="http://192.168.1.159:5000/video_feed" class="fullscreen-bg_video" /> -->
+  <!-- <img src="http://192.168.4.177:5000/video_feed" class="fullscreen-bg_video" /> -->
+
 
 <div  class="fullscreen-bg">
-<img src="http://10.0.0.20:5000/video_feed" class="fullscreen-bg_video" />
+<img src="http://192.168.4.177:5000/video_feed" class="fullscreen-bg_video" />
 </div>
 <div class="upButton-position">
      <button ion-button icon-only round outline large (click)='motor_A_forwardBUTTON()'>
@@ -41,9 +43,6 @@
    <button ion-button outline icon-only round large (click)='toggleAppButton()'>
         <ion-icon name="bulb"></ion-icon>
    </button>
-</div> 
+</div>
 
    </ion-content>
-  
-
-

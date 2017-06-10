@@ -9,8 +9,10 @@ export class MotorService {
 
     //current ip: CHOOSE ONE:
     //private currentIP: string = "http://192.168.1.159:8080/";
+    //private currentIP: string = "http://10.0.0.20:8080/";
+    //private currentIP: string = "http://192.168.4.177:8080/";
     //DON'T FORGET TO CHANGE IMG SRC IN HTML
-    private currentIP: string = "http://10.0.0.20:8080/";
+    private currentIP: string = "http://192.168.4.177:8080/";
 
     private rsvpURL: string = this.currentIP + "rsvp";
     private toggleURL: string = this.currentIP + "toggleLED";
@@ -35,7 +37,7 @@ export class MotorService {
 
     getImage(){
         this.http.get(this.myImageURL,this.data).subscribe(res => console.log('got picture: ' + res));
-         
+
         console.log("motor-service says did getImage");
     }
 
@@ -74,8 +76,5 @@ export class MotorService {
         this.http.post(this.motor_B_reverseURL,this.data).subscribe(res => console.log('response received: ' + res))
     }
 
-    
+
 }
-
-
-

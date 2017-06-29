@@ -7,11 +7,11 @@ export class MotorService {
     //TODO: this.data will become get-pin-state etc
     private data: any;
 
-    //current ip: CHOOSE ONE:
-    //private currentIP: string = "http://192.168.1.159:8080/";
-    //private currentIP: string = "http://10.0.0.20:8080/";
-    //private currentIP: string = "http://192.168.4.177:8080/";
-    //DON'T FORGET TO CHANGE IMG SRC IN HTML
+    //current ip: CHOOSE ONE based on current LAN:
+      //private currentIP: string = "http://192.168.1.159:8080/";
+      //private currentIP: string = "http://10.0.0.20:8080/";
+      //private currentIP: string = "http://192.168.4.177:8080/";
+    //DON'T FORGET TO CHANGE IMG SRC IN page1.html
     private currentIP: string = "http://192.168.4.177:8080/";
 
     private rsvpURL: string = this.currentIP + "rsvp";
@@ -28,8 +28,6 @@ export class MotorService {
 
     rsvpTEST(){
         this.http.get(this.rsvpURL).subscribe(res => {
-
-
             console.log(res);
         })
         console.log("rsvp test log response");
@@ -37,18 +35,14 @@ export class MotorService {
 
     getImage(){
         this.http.get(this.myImageURL,this.data).subscribe(res => console.log('got picture: ' + res));
-
         console.log("motor-service says did getImage");
     }
-
     refreshImage(){
-    Observable.interval(3100).subscribe(x => {
-
- var image = document.getElementById("myImageId");
-
-    this.getImage();
-    });
-}
+      Observable.interval(3100).subscribe(x => {
+        var image = document.getElementById("myImageId");
+        this.getImage();
+      });
+    }
     startCamera(){
         this.http.post(this.startCameraURL,this.data).subscribe(res => console.log('camera started: '+ res));
     }
@@ -75,6 +69,4 @@ export class MotorService {
     motor_B_reverse(){
         this.http.post(this.motor_B_reverseURL,this.data).subscribe(res => console.log('response received: ' + res))
     }
-
-
 }

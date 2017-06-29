@@ -12,13 +12,7 @@ import { Observable } from 'rxjs/Rx';
 })
 export class Page2 {
   
-
-  //constructor(public navCtrl: NavController, public navParams: NavParams) {
-    // If we navigated to this page, we will have an item available as a nav param
-    //this.selectedItem = navParams.get('item');
-
-    constructor(public navCtrl: NavController, private motorService: MotorService) {
-    
+  constructor(public navCtrl: NavController, private motorService: MotorService) {
   }
 
   refreshImage(){
